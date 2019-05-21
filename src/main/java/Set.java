@@ -8,7 +8,7 @@ public class Set {
     }
 
     public void add(Object item) {
-        if(!contains(item)){
+        if (!contains(item)) {
             setArray[size] = item;
             size++;
         }
@@ -20,20 +20,20 @@ public class Set {
 
     public boolean contains(Object item) {
         for (int i = 0; i < size; i++) {
-            if(setArray[i] == item) return true;
+            if (setArray[i] == item) return true;
         }
         return false;
     }
 
     public boolean remove(Object itemToRemove) {
-        if(!contains(itemToRemove)) return false;
+        if (!contains(itemToRemove)) return false;
 
         for (int i = 0; i < size; i++) {
-            if(setArray[i] == itemToRemove){
+            if (setArray[i] == itemToRemove) {
                 setArray[i] = null;
 
-                for (int j = i; j < size -1; j++) {
-                    setArray[j] = setArray[j+1];
+                for (int j = i; j < size - 1; j++) {
+                    setArray[j] = setArray[j + 1];
                 }
 
                 size--;
